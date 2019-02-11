@@ -176,6 +176,16 @@ class LlhToEllipsoidTest {
                 Arguments.of(
                         new LonLatHeight(100.523186, 13.736717, 0),
                         new Coordinate(-1131.756, 6092.649, 1504.702)
+                ),
+                // Centre of earth on equator
+                Arguments.of(
+                        new LonLatHeight(0, 0, -6378.1370),
+                        new Coordinate(0, 0, 0)
+                ),
+                // Centre of earth on pole
+                Arguments.of(
+                        new LonLatHeight(0, -90, -6356.752314245),
+                        new Coordinate(0, 0, 0)
                 )
         );
     }
