@@ -5,6 +5,8 @@ import com.jsharpe.llh_to_ecef.dto.LonLatHeight;
 
 public abstract class Model {
 
+    protected static final double DEGREE_TO_RADIANS = Math.PI / 180;
+
     private static final String BAD_RADIUS_MESSAGE = "Radius of a sphere may not be 0 or negative.";
 
     private static final double LATITUDE_MINIMUM = -90;

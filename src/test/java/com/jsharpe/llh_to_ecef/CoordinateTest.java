@@ -1,6 +1,7 @@
 package com.jsharpe.llh_to_ecef;
 
 import com.jsharpe.llh_to_ecef.dto.Coordinate;
+import com.jsharpe.llh_to_ecef.dto.LonLatHeight;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -46,6 +47,46 @@ class CoordinateTest {
 
         // Should hold true!
         Assertions.assertNotEquals(hashA, hashB);
+    }
+
+    @SuppressWarnings("EqualsWithItself")
+    @Test
+    void testWithSelf() {
+        // Given
+        final Coordinate coordinate = new Coordinate(1, 2, 3);
+
+        // When
+        final boolean equals = coordinate.equals(coordinate);
+
+        // Then
+        Assertions.assertTrue(equals);
+    }
+
+    @SuppressWarnings("ConstantConditions")
+    @Test
+    void testWithNull() {
+        // Given
+        final Coordinate coordinate = new Coordinate(1, 2, 3);
+
+        // When
+        final boolean equals = coordinate.equals(null);
+
+        // Then
+        Assertions.assertFalse(equals);
+    }
+
+    @SuppressWarnings({"ConstantConditions", "EqualsBetweenInconvertibleTypes"})
+    @Test
+    void testWithDifferentClass() {
+        // Given
+        final Coordinate coordinate = new Coordinate(1, 2, 3);
+        final LonLatHeight lonLatHeight = new LonLatHeight(1, 2, 3);
+
+        // When
+        final boolean equals = coordinate.equals(lonLatHeight);
+
+        // Then
+        Assertions.assertFalse(equals);
     }
 
 }

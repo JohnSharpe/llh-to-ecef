@@ -8,8 +8,6 @@ import com.jsharpe.llh_to_ecef.dto.LonLatHeight;
  */
 public class EllipsoidModel extends Model {
 
-    private static final double DEGREE_TO_RADIANS = Math.PI / 180;
-
     // Equatorial radius
     private final double semiMajor;
 
