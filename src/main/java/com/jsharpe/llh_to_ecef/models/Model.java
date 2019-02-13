@@ -51,8 +51,6 @@ public abstract class Model {
 
     public abstract Coordinate translate(final LonLatHeight lonLatHeight);
 
-    // public abstract LonLatHeight translate(final Coordinate coordinate);
-
     public static Model earthKilometers() {
         return new EllipsoidModel(6378.1370, 6356.752314245);
     }

@@ -22,7 +22,7 @@ class LlhToEllipsoidTest {
         final Model sphereModel = new EllipsoidModel(semiMajor, semiMinor);
         final LonLatHeight lonLatHeight = new LonLatHeight(0, 0, 0);
 
-        // When TODO Consider the name of this method - translate suggests movement, maybe transform?
+        // When
         final Coordinate coordinate = sphereModel.translate(lonLatHeight);
 
         // Then
@@ -98,22 +98,6 @@ class LlhToEllipsoidTest {
         Assertions.assertEquals(coordinate.getZ(), result.getZ(), 0.001);
     }
 
-//    @ParameterizedTest
-//    @MethodSource("kilometerProvider")
-//    void testNormalKilometerValuesToLLH(final LonLatHeight lonLatHeight, final Coordinate coordinate) {
-//        // Given
-//        final Model earth = Model.earthKilometers();
-//
-//        // When
-//        final LonLatHeight result = earth.translate(coordinate);
-//
-//        // Then
-//        Assertions.assertEquals(lonLatHeight.getLongitude(), result.getLongitude());
-//        Assertions.assertEquals(lonLatHeight.getLatitude(), result.getLatitude());
-//        Assertions.assertEquals(lonLatHeight.getHeight(), result.getHeight());
-//        Assertions.assertEquals(0, result.getHeight());
-//    }
-
     // Values taken from http://www.oc.nps.edu/oc2902w/coord/llhxyz.htm
     private static Stream<Arguments> kilometerProvider() {
         return Stream.of(
@@ -124,7 +108,7 @@ class LlhToEllipsoidTest {
                 ),
                 // Paris
                 Arguments.of(
-                        new LonLatHeight(2.2770203,48.8589507, 0),
+                        new LonLatHeight(2.2770203, 48.8589507, 0),
                         new Coordinate(4200.941, 167.04, 4780.253)
                 ),
                 // Berlin

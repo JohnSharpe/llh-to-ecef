@@ -4,7 +4,7 @@ import com.jsharpe.llh_to_ecef.dto.Coordinate;
 import com.jsharpe.llh_to_ecef.dto.LonLatHeight;
 
 /**
- * This model is a simple sphere, so radius is a single, constant value.
+ * This model is a simple sphere, so there is only one radius.
  */
 public class SphereModel extends Model {
 
@@ -19,7 +19,6 @@ public class SphereModel extends Model {
         this.radius = radius;
     }
 
-    // TODO Consider the name of this method - translate suggests movement, maybe transform?
     @Override
     public Coordinate translate(final LonLatHeight lonLatHeight) {
         this.validateLongitude(lonLatHeight.getLongitude());
@@ -35,11 +34,5 @@ public class SphereModel extends Model {
 
         return new Coordinate(x, y, z);
     }
-
-//    @Override
-//    public LonLatHeight translate(Coordinate coordinate) {
-//        // TODO
-//        return null;
-//    }
 
 }
