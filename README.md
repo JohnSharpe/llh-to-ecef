@@ -1,4 +1,4 @@
-# llh-to-ecef
+# llh-to-ecef [![Build Status](https://travis-ci.com/JohnSharpe/llh-to-ecef.svg?branch=master)](https://travis-ci.com/JohnSharpe/llh-to-ecef)
 A Java library to convert longitude/latitude coordinates to ECEF (x,y,z) coordinates.
 
 ## Build
