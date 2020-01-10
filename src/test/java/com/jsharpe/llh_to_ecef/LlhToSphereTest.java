@@ -2,7 +2,6 @@ package com.jsharpe.llh_to_ecef;
 
 import com.jsharpe.llh_to_ecef.dto.Coordinate;
 import com.jsharpe.llh_to_ecef.dto.LonLatHeight;
-import com.jsharpe.llh_to_ecef.models.EllipsoidModel;
 import com.jsharpe.llh_to_ecef.models.Model;
 import com.jsharpe.llh_to_ecef.models.SphereModel;
 import org.junit.jupiter.api.Assertions;

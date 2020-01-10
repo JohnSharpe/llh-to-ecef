@@ -75,7 +75,7 @@ class CoordinateTest {
         Assertions.assertFalse(equals);
     }
 
-    @SuppressWarnings({"ConstantConditions", "EqualsBetweenInconvertibleTypes"})
+    @SuppressWarnings({"EqualsBetweenInconvertibleTypes"})
     @Test
     void testWithDifferentClass() {
         // Given
